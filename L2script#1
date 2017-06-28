@@ -43,6 +43,8 @@ void loop()
   //Serial.print(uS / US_ROUNDTRIP_CM); // Convert ping time to distance in cm and print result (0 = outside set distance range)
   Serial.print(uS ); // Convert ping time to distance in cm and print result (0 = outside set distance range)
 
+//MAIN CODE SEGMENT
+
   Serial.println("cm");
   if( uS > 100 && uS < 935 ){
     goBackward();
