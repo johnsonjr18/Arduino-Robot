@@ -46,14 +46,14 @@ void loop()
 //MAIN CODE SEGMENT
 
   Serial.println("cm");
-  if( uS > 150 && uS < 935 ){
+  if( uS > 200 && uS < 935 ){
     goBackward();
     delay(800);
     takeLeft();
     digitalWrite(LED,HIGH);
     delay(1000);
     takeRight();
-    delay(350);
+    delay(220);
   } else {
     goStraight();
     digitalWrite(LED,LOW);
@@ -78,7 +78,7 @@ void takeLeft()
    digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
    // set speed to 200 out of possible range 0~255
-  analogWrite(enB, 75);
+  analogWrite(enB, 25);
   
   //delay(500);
 }
@@ -88,7 +88,7 @@ void takeRight()
      digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);  
   // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 75);
+  analogWrite(enA, 25);
    
     digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
@@ -103,12 +103,12 @@ void goStraight()
      digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 200);
+  analogWrite(enA, 250);
   // turn on motor B
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enB, 200);
+  analogWrite(enB, 250);
   
  // delay(2000);
 }
@@ -118,12 +118,12 @@ void goBackward()
    digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 200);
+  analogWrite(enA, 150);
   // turn on motor B
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enB, 200);
+  analogWrite(enB, 150);
   
  // delay(2000);
 }
