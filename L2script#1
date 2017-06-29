@@ -46,12 +46,14 @@ void loop()
 //MAIN CODE SEGMENT
 
   Serial.println("cm");
-  if( uS > 100 && uS < 935 ){
+  if( uS > 150 && uS < 935 ){
     goBackward();
-    delay(1500);
+    delay(800);
     takeLeft();
     digitalWrite(LED,HIGH);
     delay(1000);
+    takeRight();
+    delay(350);
   } else {
     goStraight();
     digitalWrite(LED,LOW);
@@ -125,5 +127,4 @@ void goBackward()
   
  // delay(2000);
 }
-
 
