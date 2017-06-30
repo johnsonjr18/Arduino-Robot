@@ -53,7 +53,7 @@ void loop()
     digitalWrite(LED,HIGH);
     delay(1000);
     takeRight();
-    delay(220);
+    delay(230);
   } else {
     goStraight();
     digitalWrite(LED,LOW);
@@ -103,12 +103,12 @@ void goStraight()
      digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 200);
+  analogWrite(enA, 250);
   // turn on motor B
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
   // set speed to 200 out of possible range 0~255
-  analogWrite(enB, 200);
+  analogWrite(enB, 250);
   
  // delay(2000);
 }
